@@ -374,7 +374,7 @@ const App = () => {
                 © {new Date().getFullYear()} CINEVOXA <br />
                 Made with ❤️ by{" "}
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/vishalraj55"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white underline underline-offset-2 transition"
