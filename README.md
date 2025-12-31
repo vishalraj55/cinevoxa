@@ -15,7 +15,7 @@
 
 CineVoxa is a modern movie discovery web application designed to deliver a visually refined and cinematic browsing experience. Built with React and Tailwind CSS, the project focuses on clean UI architecture, responsive design, and performance-oriented frontend development.
 
-The application emphasizes presentation quality and design consistency, making it well-suited as a frontend portfolio project.
+
 
 ---
 
@@ -58,6 +58,13 @@ The design process began with simple wireframes to define layout flow and conten
 - **Build Tool:** Vite  
 - **State Management:** React Hooks  
 - **Data Source:** Static / local data  
+
+---
+## Workflow
+
+The development workflow of CineVoxa follows a structured, UI-first approach to ensure clarity, performance, and maintainability.
+
+![CineVoxa Workflow](src\assets\workflow.png)
 
 ---
 
