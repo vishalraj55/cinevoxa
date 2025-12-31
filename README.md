@@ -64,7 +64,7 @@ The design process began with simple wireframes to define layout flow and conten
 
 The development workflow of CineVoxa follows a structured, UI-first approach to ensure clarity, performance, and maintainability.
 
-![CineVoxa Workflow](movies\src\assets\workflow.png)
+![CineVoxa Workflow](src/assets/workflow.png)
 
 ---
 
