@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+
+/* =========================
+   THEME (DARK / GLASS)
+   ========================= */
+@theme {
+  --color-bg: #000000;
+  --color-surface: rgba(15, 15, 15, 0.65);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-muted: rgba(255, 255, 255, 0.65);
+
+  --font-dm-sans: "DM Sans", sans-serif;
+}
+
+/* =========================
+   BASE
+   ========================= */
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-dm-sans);
+    background-color: var(--color-bg);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  main {
+    @apply min-h-screen relative;
+    background-color: var(--color-bg);
+  }
+
+  h1 {
+    @apply text-white font-extrabold tracking-tight;
+  }
+
+  h2 {
+    @apply text-white font-bold tracking-tight;
+  }
+}
+
+/* =========================
+   COMPONENTS
+   ========================= */
+@layer components {
+
+  /* Glass container */
+  .glass {
+    background: linear-gradient(
+      180deg,
+      rgba(25, 25, 25, 0.75),
+      rgba(10, 10, 10, 0.65)
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Layout wrapper */
+  .wrapper {
+    @apply max-w-7xl mx-auto px-6 py-10 relative;
+  }
+
+  /* Search input */
+  .search input {
+    @apply w-full px-4 py-2 text-sm text-white rounded-lg
+           bg-black/60 border border-white/20
+           placeholder-gray-400 outline-none
+           transition
+           focus:border-white focus:bg-black/80;
+  }
+
+  /* Category pills */
+  .category-pill {
+    @apply px-4 py-1.5 rounded-full text-sm
+           transition-all duration-200
+           bg-black/40 backdrop-blur
+           border border-white/20
+           text-gray-300
+           hover:text-white hover:bg-white/10 hover:border-white/40;
+  }
+
+  .category-pill.active {
+    @apply bg-white text-black border-transparent shadow;
+  }
+
+  /* Movie card (if used anywhere) */
+  .movie-card {
+    @apply bg-black/40 backdrop-blur-md
+           border border-white/10
+           rounded-xl p-4
+           transition-all duration-300
+           hover:scale-[1.04] hover:bg-black/70 hover:shadow-xl;
+  }
+
+  .movie-card img {
+    @apply rounded-lg w-full object-cover;
+  }
+
+  .movie-card h3 {
+    @apply mt-2 text-sm font-semibold text-white line-clamp-1;
+  }
+
+  .movie-card .meta {
+    @apply mt-1 text-xs text-white/60 flex gap-2;
+  }
+}
+
+/* =========================
+   UTILITIES
+   ========================= */
+
+/* Hide scrollbar (single source) */
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Hero bottom fade */
+@utility hero-fade {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+}
+/* ===SCROLLBAR COMPLETELY === */ 
+.no-scrollbar::-webkit-scrollbar { 
+  width: 0 !important; 
+  height: 0 !important; 
+  display: none !important; 
+} 
+.no-scrollbar { 
+  scrollbar-width: none !important; 
+} 
+.no-scrollbar { 
+  -ms-overflow-style: none !important;
+ } 
+ 
+ /*movie details*/ 
+ .hide-scrollbar::-webkit-scrollbar { 
+  display: none; 
+} 
+.hide-scrollbar { 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+} 
+
+/*hero fade*/
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 0.7s ease-in-out;
+}
