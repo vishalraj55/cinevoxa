@@ -17,7 +17,7 @@ CineVoxa is a modern movie discovery web application designed to deliver a visua
 
 
 
----
+
 
 ## Live Demo
 
@@ -26,7 +26,7 @@ CineVoxa is a modern movie discovery web application designed to deliver a visua
 The live version demonstrates the current UI layout, interaction patterns, and visual styling.  
 For the best experience, viewing on a desktop or large screen is recommended.
 
----
+
 
 ## Design Approach
 
@@ -39,7 +39,7 @@ The design process began with simple wireframes to define layout flow and conten
 - Subtle transitions for interaction feedback
 - Consistent spacing and typography
 
----
+
 
 ## Features
 
@@ -49,7 +49,7 @@ The design process began with simple wireframes to define layout flow and conten
 - Responsive design across desktop, tablet, and mobile
 - Smooth hover states and transitions
 
----
+
 
 ## Technology Stack
 
@@ -57,16 +57,8 @@ The design process began with simple wireframes to define layout flow and conten
 - **Styling:** Tailwind CSS  
 - **Build Tool:** Vite  
 - **State Management:** React Hooks  
-- **Data Source:** Static / local data  
+- **Data Source:** Local data / watchmode api 
 
----
-## Workflow
-
-The development workflow of CineVoxa follows a structured, UI-first approach to ensure clarity, performance, and maintainability.
-
-![CineVoxa Workflow](src/assets/workflow.png)
-
----
 
 ## Installation
 
@@ -75,3 +67,12 @@ git clone https://github.com/vishalraj55/cinevoxa.git
 cd cinevoxa
 npm install
 npm run dev
+```
+
+## Workflow
+
+The development workflow of CineVoxa follows a structured, UI-first approach to ensure clarity, performance, and maintainability.
+
+![CineVoxa Workflow](src/assets/workflow.png)
+
+
