@@ -10,7 +10,7 @@ const App = () => {
   const navigate = useNavigate();
 
   /* ───────── STATE ───────── */
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  // const [selectedCategory, setSelectedCategory] = useState("All");
   const [search, setSearch] = useState("");
   const [watchlist, setWatchlist] = useState([]);
 
@@ -156,21 +156,28 @@ const App = () => {
   shadow-[0_8px_30px_rgba(0,0,0,0.35)]
 ">
   {/* LOGO */}
-  <h1
-    onClick={() => window.location.reload()}
+<h1
+  onClick={() => window.location.reload()}
+  className="cursor-pointer flex items-center gap-1 select-none"
+>
+  <img
+    src="/cinevoxa-logo.png"
+    alt="Cinevoxa"
+    className="h-6 sm:h-7 object-contain"
+  />
+
+  <span
     className="
-      cursor-pointer
-      text-2xl sm:text-3xl
-      font-['Bebas_Neue']
-      tracking-[0.25em]
-      text-[#b11226]
-      drop-shadow-[0_2px_12px_rgba(177,18,38,0.45)]
-      hover:tracking-[0.32em]
-      transition-all
+      text-lg sm:text-xl
+      font-semibold
+      tracking-normal
+      text-black dark:text-white
     "
+    style={{ fontFamily: "Roboto, Arial, sans-serif" }}
   >
-    CINEVOXA
-  </h1>
+    Cinevoxa
+  </span>
+</h1>
 
   {/* SEARCH */}
   <div className="relative flex items-center">
@@ -214,7 +221,7 @@ const App = () => {
 
   {/* MOBILE SEARCH OVERLAY */}
   {showMobileSearch && (
-    <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur">
+    <div className="fixed inset-0 z-60 bg-black/80 backdrop-blur">
       <div className="flex items-center gap-3 px-4 pt-5">
         <input
           autoFocus
